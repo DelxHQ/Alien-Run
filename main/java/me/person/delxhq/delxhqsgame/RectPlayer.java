@@ -12,7 +12,13 @@ import android.graphics.Rect;
 public class RectPlayer implements GameObject {
 
     private Rect rectangle;
+    public Rect getRectangle;
     private int color;
+
+
+    public Rect getRectangle() {
+        return rectangle;
+    }
 
     public RectPlayer(Rect rectangle, int color) {
         this.rectangle = rectangle;
