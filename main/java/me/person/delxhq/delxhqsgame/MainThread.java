@@ -17,6 +17,7 @@ public class MainThread extends Thread {
     private static Canvas canvas;
 
     public void setRunning(boolean running) {
+
         this.running = running;
     }
 
@@ -56,7 +57,7 @@ public class MainThread extends Thread {
                     }
                 }
             }
-            timeMills = (System.nanoTime() - startTime)/10000000;
+            timeMills = (System.nanoTime() - startTime) / 10000000;
             waitTime = targetTine - timeMills;
             try {
                 if (waitTime > 0)
@@ -68,7 +69,7 @@ public class MainThread extends Thread {
             totalTime += System.nanoTime() - startTime;
             frameCount++;
             if (frameCount == MAX_FPS) {
-                averageFPS = 1000/((totalTime/frameCount)/10000000);
+                averageFPS = 1000 / ((totalTime / frameCount) / 10000000);
                 frameCount = 0;
                 totalTime = 0;
             }
